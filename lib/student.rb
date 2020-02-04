@@ -75,7 +75,7 @@ class Student
   end
 
   def first_student_in_grade_10
-
+    sql = "SELECT * FROM Students WHERE grade = 10 LIMIT 1"
   end
 
 end
