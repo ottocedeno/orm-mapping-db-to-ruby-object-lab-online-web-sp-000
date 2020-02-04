@@ -78,7 +78,6 @@ class Student
     sql = "SELECT * FROM Students WHERE grade = 10 LIMIT 1"
 
     self.new_from_db(DB[:conn].execute(sql).first)
-
   end
 
 end
