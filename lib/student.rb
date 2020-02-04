@@ -17,7 +17,9 @@ class Student
     # remember each row should be a new instance of the Student class
     sql = "SELECT * FROM Students"
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql).each do |student|
+      student.new_from_db
+    end
 
     binding.pry
   end
