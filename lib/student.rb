@@ -27,8 +27,7 @@ class Student
     # return a new instance of the Student class
     sql = "SELECT * FROM Students WHERE name = ?"
 
-    test = DB[:conn].execute(sql, name).map {|student| self.new_from_db(student)}.first
-    binding.pry
+    DB[:conn].execute(sql, name).map {|student| self.new_from_db(student)}.first
   end
 
   def save
