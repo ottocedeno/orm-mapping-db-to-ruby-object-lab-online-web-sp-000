@@ -18,7 +18,7 @@ class Student
     sql = "SELECT * FROM Students"
 
     DB[:conn].execute(sql).each do |student|
-      student.new_from_db
+      self.new_from_db(student)
     end
 
     # binding.pry
