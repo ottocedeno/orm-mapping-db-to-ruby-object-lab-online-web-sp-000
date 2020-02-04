@@ -5,10 +5,10 @@ class Student
 
   def self.new_from_db(row)
     # create a new Student object given a row from the database
-    self.new.tap do |student|
-      student.id = row[0]
-      student.name = row[1]
-      student.grade = row[2]
+    self.new.tap do |new_student|
+      new_student.id = row[0]
+      new_student.name = row[1]
+      new_student.grade = row[2]
     end
   end
 
@@ -61,5 +61,7 @@ class Student
 
     DB[:conn].execute(sql).map {|student| self.new_from_db(student)}
   end
+
+  def
 
 end
