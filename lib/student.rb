@@ -21,7 +21,7 @@ class Student
       student.new_from_db
     end
 
-    binding.pry
+    # binding.pry
   end
 
   def self.find_by_name(name)
