@@ -68,7 +68,8 @@ class Student
     DB[:conn].execute(sql).map {|student| self.new_from_db(student)}
   end
 
-  def first_X_students_in_grade_10
+  def self.first_X_students_in_grade_10
+    sql = "SELECT * FROM Students WHERE"
 
   end
 
