@@ -26,6 +26,8 @@ class Student
     # find the student in the database given a name
     # return a new instance of the Student class
     sql = "SELECT * FROM Students WHERE name = ?"
+
+    DB[:conn].execute(sql, name)
   end
 
   def save
