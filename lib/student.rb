@@ -69,7 +69,7 @@ class Student
   end
 
   def self.first_X_students_in_grade_10
-    sql = "SELECT * FROM Students WHERE"
+    sql = "SELECT * FROM Students"
 
   end
 
